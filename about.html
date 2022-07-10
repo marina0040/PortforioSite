@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/destyle.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tbx0viz.css">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'hfa0rok',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+      
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-contents">
+                <h1 class="title"><a href="./index.html">Oshio Marina</a></h1>
+                <nav class="nav">
+                    <ul class="header-menu d-none d-md-block">
+                        <li class="menu-item"><a href="#">ABOUT</a></li>
+                        <li class="menu-item"><a href="./works.html">WORKS</a></li>
+                    </ul>
+                    <div>
+                        <div class="btn-trigger d-md-none" id="btn01">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div id="h-nav" class="menu-modal d-md-none">
+                            <ul>
+                                <li class="menu-modal-item"><a href="#">ABOUT</a></li>
+                                <li class="menu-modal-item"><a href="./works.html">WORKS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="section-title">
+                <h3>ABOUT</h3>
+                <p>私について</p>
+            </div>
+            <div class="about-contents">
+                <div class="profile-image">
+                    <img src="./assets/shape.png">
+                </div>
+                <div class="profile">
+                    <div class="flex-group">
+                        <div class="name">
+                            <h4>大塩茉里奈</h4>
+                            <p>Oshio Marina</p>
+                        </div>
+                        <a href="#" class="instagram-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <p>1998.05.28 TOKYO</p>
+                    </div>
+                    <div class="introduction">
+                        <p>2019年女子美術大学 芸術学部を中退後、
+                            キャリアについて考え直す期間としてアルバイトをしながら、
+                            2022年コードキャンプのデザインマスター専攻を修了。
+                            相手に思いやりを持って、関わる全ての人に対して
+                            「安心できる」デザインを心がけて
+                            現在webデザイナーを目指して転職活動を行っています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-title">
+                <h3>SKILL</h3>
+                <p>できること</p>
+            </div>
+            <div class="skill-contents">
+                <div class="degign">
+                    <h4>Design</h4>
+                    <ul>
+                        <li>
+                            <p>Photoshop</p>
+                        </li>
+                        <li>
+                            <p>Illustrator</p>
+                        </li>
+                        <li>
+                            <p>Adobe XD</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cording">
+                    <h4>Cording</h4>
+                    <ul>
+                        <li>
+                            <p>HTML</p>
+                        </li>
+                        <li>
+                            <p>CSS</p>
+                        </li>
+                        <li>
+                            <p>javascript</p>
+                        </li>
+                        <li>
+                            <p>bootstrap</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="other">
+                    <h4>Other</h4>
+                    <ul>
+                        <li>
+                            <p>Premire Pro</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="#" class="return-top d-md-none d-block">
+        <!-- <i class="fa-solid fa-circle-chevron-up"></i> -->
+    </a>
+    <footer>
+        <p><small>@2022 Oshio Marina</small></p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</html>

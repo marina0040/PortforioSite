@@ -1,0 +1,258 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "neuzeit-grotesk", "toppan-bunkyu-gothic-pr6n", "MS Pゴシック", sans-serif;
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+header {
+    margin: 0 2% 72px;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.header-contents {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 32px 0;
+    margin: 0 auto;
+}
+
+.title {
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.title a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-menu {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+}
+
+
+.btn-trigger {
+    position: relative;
+    z-index: 9999;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+}
+
+.btn-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+.btn-trigger,
+.btn-trigger span {
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+}
+
+.btn-trigger span:nth-of-type(1) {
+    top: 4px;
+}
+
+.btn-trigger span:nth-of-type(2) {
+    top: 16px;
+}
+
+.btn-trigger span:nth-of-type(3) {
+    bottom: 4px;
+}
+
+#btn01.active span:nth-of-type(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+#btn01.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#btn01.active span:nth-of-type(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+#h-nav {
+    position: absolute;
+    z-index: 999;
+    background-color: #e0731a;
+    left: 0;
+    top: -120%;
+    width: 100%;
+    height: 20vh;
+    transition: all 0.5s;
+}
+
+#h-nav.panelactive {
+    top: 0;
+}
+
+#h-nav ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#h-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#h-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section {
+    margin-bottom: 104px;
+}
+
+.work-contents {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 80%;
+}
+
+.work-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.work-img {
+    margin-bottom: 40px;
+}
+
+.work-img img {
+    width: 100%;
+}
+
+.btn {
+    background: #e0731a;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
+    transition: all .3s;
+}
+
+.btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.work-detail,
+.work-tool {
+    margin-bottom: 24px;
+}
+
+.work-tool h2 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.return-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    bottom: 23px;
+    background-color: #e0731a;
+    border-radius: 50%;
+    opacity: 0.6;
+    /* transition: 0.3s; */
+}
+
+.return-top::before {
+    content: "";
+    display: block;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 30%;
+    height: 30%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+footer {
+    margin: 48px auto 0;
+}
+
+footer p {
+    text-align: center;
+    border-top: 1px solid #000;
+    padding: 32px 0;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        margin: 0 0 72px;
+    }
+
+    .header-contents {
+        padding: 32px 18px;
+    }
+
+}

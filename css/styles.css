@@ -1,0 +1,445 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "neuzeit-grotesk", "toppan-bunkyu-gothic-pr6n","MS Pゴシック",sans-serif;
+    animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+h3 {
+    font-size: clamp(1.5rem, 1.318rem + 0.78vw, 2.25rem);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+h3:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 30px;
+    /*線の長さ*/
+    height: 3px;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: black;
+    /*線の色*/
+    border-radius: 2px;
+    /*線の丸み*/
+}
+
+header {
+    display: flex;
+    margin: 0 2%;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+
+.header-contents {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 32px 0;
+    margin: 0 auto;
+}
+
+.title {
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.title a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-menu {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.main-image {
+    position: relative;
+    margin-bottom: 72px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.main-title p {
+    font-size: 30px;
+    font-weight: 400;
+    color: #e0731a;
+    line-height: 1;
+}
+
+.btn-trigger {
+    position: relative;
+    z-index: 9000;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+}
+
+.btn-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+.btn-trigger,
+.btn-trigger span {
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+}
+
+.btn-trigger span:nth-of-type(1) {
+    top: 4px;
+}
+
+.btn-trigger span:nth-of-type(2) {
+    top: 16px;
+}
+
+.btn-trigger span:nth-of-type(3) {
+    bottom: 4px;
+}
+
+#btn01.active span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+#btn01.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#btn01.active span:nth-of-type(3) {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+#h-nav {
+    position: absolute;
+    z-index: 999;
+    background-color: #e0731a;
+    left: 0;
+    top: -120%;
+    width: 100%;
+    height: 20vh;
+    transition: all 0.5s;
+}
+
+#h-nav.panelactive {
+    top: 0;
+}
+
+#h-nav ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#h-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+#h-nav li a {
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+section {
+    margin-bottom: 104px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-title p {
+    font-size: clamp(0.875rem, 0.845rem + 0.13vw, 1rem);
+}
+.about-contents {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: row-reverse;
+    text-align: center;
+    gap: 10%;
+}
+.profile-image  {
+    text-align: center;
+    
+    width:40vh;/*横幅*/
+  height: 40vh;/*縦幅*/
+  background: #000;/*背景色*/
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+}
+
+@keyframes fluidrotate {  
+	  
+0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+}
+14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+}
+28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+}
+42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+}
+56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+}
+70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+}
+84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+}
+	  
+}
+.profile {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.fa-instagram {
+    font-size: 2.5em;
+}
+
+.instagram-icon:hover {
+    color: #e0731a;
+    transition: all .3s;
+}
+
+.name {
+    font-size: 24px;
+}
+
+.introduction {
+    margin-bottom: 40px;
+}
+
+.view-all-btn {
+    text-align: right;
+}
+
+.btn-arrow{
+    /*矢印と下線の基点とするためrelativeを指定*/
+	position: relative;
+    /*形状*/
+    display: inline-block;
+	padding: 0 20px;
+    outline: none;
+}
+.btn-arrow:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/*矢印と下線の形状*/
+.btn-arrow::before{
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+	position: absolute;
+    bottom:-10px;
+    left:15%;
+    /*下線の形状*/    
+    width: 85%;
+    height: 2px;
+	background:#333;
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+.btn-arrow::after{
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+	position: absolute;
+    bottom:-5px;
+    right:0;
+    /*矢印の形状*/    
+    width: 15px;
+    height: 2px;
+	background: #333;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+.btn-arrow:hover::before ,.btn-arrow:hover::after {
+    background: #e0731a;
+}
+
+/*hoverした際の移動*/
+.btn-arrow:hover::before{
+    left:20%;
+}
+
+.btn-arrow:hover::after{
+    right:-5%;
+}
+.works-contents {
+    max-width: 1100px;
+    width: 85%;
+    margin: 0 auto;
+}
+.works-list {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+    /*gap: 10%;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:24px;
+    margin-bottom: 40px;
+}
+.works-item {
+    /*margin-bottom: 40px;*/
+    width: 100%;
+    /*max-width: 300px;*/
+}
+.works-item img {
+    width: 100%;
+}
+.return-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    bottom: 23px;
+    background-color: #e0731a;
+    border-radius: 50%;
+    opacity: 0.6;
+    /* transition: 0.3s; */
+  }
+  .return-top::before {
+    content: "";
+    display: block;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 30%;
+    height: 30%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+
+footer {
+    margin: 48px auto 0;
+}
+footer p {
+    text-align: center;
+    border-top: 1px solid #000;
+    padding: 32px 0;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        margin: 0;
+    }
+    .header-contents {
+        padding: 32px 18px;
+    }
+    .about-contents {
+        display: block;
+    }
+    .profile {
+        margin-top: 32px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .works-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+    
+    footer {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-contents {
+        max-width: 1000px;
+    }
+}
