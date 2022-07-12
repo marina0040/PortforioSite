@@ -52,9 +52,14 @@ header {
     text-decoration: none;
 }
 
+.header-menu a {
+    transition: all 0.3s;
+}
+
 .header-menu a:hover {
     text-decoration: none;
-    color: black;
+    color: #e0731a;
+    transition: all 0.3s;
 }
 
 .menu-item {
@@ -63,7 +68,6 @@ header {
     padding: 10px;
     font-size: 24px;
 }
-
 
 .btn-trigger {
     position: relative;
@@ -143,7 +147,7 @@ header {
 }
 
 #h-nav li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -184,14 +188,15 @@ section {
     width: 100%;
     border-radius: 30px;
     margin-bottom: 40px;
+    border-bottom: solid 2px #af6223;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
     transition: all .3s;
 }
 
 .btn:hover {
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+    border-bottom: none;
 }
 
 .btn:focus {
@@ -218,7 +223,6 @@ section {
     background-color: #e0731a;
     border-radius: 50%;
     opacity: 0.6;
-    /* transition: 0.3s; */
 }
 
 .return-top::before {

@@ -31,19 +31,13 @@ h3:before {
     position: absolute;
     left: 50%;
     bottom: -15px;
-    /*線の上下位置*/
     display: inline-block;
     width: 30px;
-    /*線の長さ*/
     height: 3px;
-    /*線の太さ*/
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    /*位置調整*/
     background-color: black;
-    /*線の色*/
     border-radius: 2px;
-    /*線の丸み*/
 }
 
 header {
@@ -55,7 +49,6 @@ header {
     margin: 0 auto;
     max-width: 1100px;
 }
-
 
 .header-contents {
     display: flex;
@@ -82,9 +75,14 @@ header {
     text-decoration: none;
 }
 
+.header-menu a {
+    transition: all 0.3s;
+}
+
 .header-menu a:hover {
     text-decoration: none;
-    color: black;
+    color: #e0731a;
+    transition: all 0.3s;
 }
 
 .menu-item {
@@ -113,13 +111,14 @@ header {
 }
 
 .main-title h2 {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
     line-height: 1;
+    color: white;
 }
 
 .main-title p {
-    font-size: 30px;
+    font-size: 38px;
     font-weight: 400;
     color: #e0731a;
     line-height: 1;
@@ -131,7 +130,6 @@ header {
     width: 36px;
     height: 36px;
     cursor: pointer;
-
 }
 
 .btn-trigger span {
@@ -163,7 +161,7 @@ header {
 }
 
 #btn01.active span:nth-of-type(1) {
-    transform: translateY(10px) rotate(-45deg);
+    transform: translateY(12px) rotate(-45deg);
 }
 
 #btn01.active span:nth-of-type(2) {
@@ -171,7 +169,7 @@ header {
 }
 
 #btn01.active span:nth-of-type(3) {
-    transform: translateY(-10px) rotate(45deg);
+    transform: translateY(-12px) rotate(45deg);
 }
 
 #h-nav {
@@ -203,7 +201,7 @@ header {
 }
 
 #h-nav li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -211,9 +209,11 @@ header {
     font-weight: bold;
     font-size: 20px;
 }
+
 section {
     margin-bottom: 104px;
 }
+
 .section-title {
     text-align: center;
     margin-bottom: 64px;
@@ -222,6 +222,7 @@ section {
 .section-title p {
     font-size: clamp(0.875rem, 0.845rem + 0.13vw, 1rem);
 }
+
 .about-contents {
     display: flex;
     width: 80%;
@@ -231,60 +232,38 @@ section {
     text-align: center;
     gap: 10%;
 }
+
 .profile-image  {
-    text-align: center;
-    
-    width:40vh;/*横幅*/
-  height: 40vh;/*縦幅*/
-  background: #000;/*背景色*/
-  animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+    width: 40%;
 }
 
-@keyframes fluidrotate {  
-	  
-0%, 100% {
-    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+.profile-image img {
+    width: 80%;
 }
-14% {
-    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
-}
-28% {
-    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
-}
-42% {
-    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
-}
-56% {
-    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
-}
-70% {
-    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
-}
-84% {
-    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
-}
-	  
-}
+
 .profile {
     display: inline-block;
     text-align: left;
-    width: 50%;
+    width: 60%;
 }
 
 .flex-group {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .fa-instagram {
     font-size: 2.5em;
 }
 
+.instagram-icon {
+    transition: all 0.3s;
+}
 .instagram-icon:hover {
     color: #e0731a;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .name {
@@ -300,45 +279,37 @@ section {
 }
 
 .btn-arrow{
-    /*矢印と下線の基点とするためrelativeを指定*/
 	position: relative;
-    /*形状*/
     display: inline-block;
 	padding: 0 20px;
     outline: none;
 }
+
 .btn-arrow:hover {
     text-decoration: none;
     color: #000;
 }
 
-/*矢印と下線の形状*/
 .btn-arrow::before{
     content: '';
-    /*絶対配置で下線の位置を決める*/
 	position: absolute;
     bottom:-10px;
     left:15%;
-    /*下線の形状*/    
     width: 85%;
     height: 2px;
 	background:#333;
-    /*アニメーションの指定*/
     transition: all .3s;
 }
 
 .btn-arrow::after{
     content: '';
-    /*絶対配置で矢印の位置を決める*/
 	position: absolute;
     bottom:-5px;
     right:0;
-    /*矢印の形状*/    
     width: 15px;
     height: 2px;
 	background: #333;
     transform: rotate(35deg);
-    /*アニメーションの指定*/
     transition: all .3s;
 }
 
@@ -346,7 +317,7 @@ section {
     background: #e0731a;
 }
 
-/*hoverした際の移動*/
+
 .btn-arrow:hover::before{
     left:20%;
 }
@@ -354,29 +325,35 @@ section {
 .btn-arrow:hover::after{
     right:-5%;
 }
+
 .works-contents {
     max-width: 1100px;
     width: 85%;
     margin: 0 auto;
 }
+
 .works-list {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: center;*/
-    /*gap: 10%;*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap:24px;
     margin-bottom: 40px;
 }
+
 .works-item {
-    /*margin-bottom: 40px;*/
     width: 100%;
-    /*max-width: 300px;*/
+    overflow: hidden;
 }
+
 .works-item img {
     width: 100%;
+    transition: all 0.3s;
 }
+
+.works-item:hover img {
+    transform: scale(1.2, 1.2);
+    transition: all 0.3s;
+}
+
 .return-top {
     width: 40px;
     height: 40px;
@@ -386,8 +363,8 @@ section {
     background-color: #e0731a;
     border-radius: 50%;
     opacity: 0.6;
-    /* transition: 0.3s; */
   }
+
   .return-top::before {
     content: "";
     display: block;
@@ -406,6 +383,7 @@ section {
 footer {
     margin: 48px auto 0;
 }
+
 footer p {
     text-align: center;
     border-top: 1px solid #000;
@@ -416,15 +394,27 @@ footer p {
     header {
         margin: 0;
     }
+
     .header-contents {
         padding: 32px 18px;
     }
+
     .about-contents {
         display: block;
     }
+
     .profile {
         margin-top: 32px;
         width: 80%;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .profile-image img {
+        width: 100%;
     }
 }
 
@@ -441,5 +431,9 @@ footer p {
 @media screen and (min-width: 1200px) {
     .about-contents {
         max-width: 1000px;
+    }
+
+    .profile-image img {
+        width: 60%;
     }
 }
