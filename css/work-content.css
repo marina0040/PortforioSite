@@ -181,6 +181,10 @@ section {
     width: 100%;
 }
 
+.work-img video {
+    width: 100%;
+}
+
 .btn {
     background: #e0731a;
     color: #fff;
@@ -212,6 +216,10 @@ section {
 .work-tool h2 {
     font-weight: 700;
     margin-bottom: 8px;
+}
+
+.work-tool img {
+    width: 100%;
 }
 
 .return-top {
